@@ -5,11 +5,16 @@
 </ul>
 
 <?php
-	require "../config.php";
 	require "functions.php";
+    require "../connection.php";
 ?>
 
 <ul>
+<?php 
+foreach(get_event_list() as $event){
+    echo "<li><a href='event.php?id=".$event["id"]."' >".$event["name"]."</a></li>";
+}    
+?>
 </ul>
 
 
